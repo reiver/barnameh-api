@@ -31,7 +31,7 @@ func init() {
 }
 
 func serveHTTP(responsewriter http.ResponseWriter, request *http.Request) {
-	log := logsrv.Prefix("www("+path+").init").Begin()
+	log := logsrv.Prefix("www("+path+").servehttp").Begin()
 	defer log.End()
 
 	if nil == responsewriter {
